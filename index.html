@@ -1,30 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="utf-8">
-<title>PDF Viewer</title>
-<style>
-body{
-    font-family: Arial;
-    text-align: center;
-}
-iframe{
-    width: 80%;
-    height: 1600px;
-    margin-bottom: 40px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yujae Shin | Project Posters</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 56px 20px 48px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 44px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      margin: 14px auto 0;
+      max-width: 780px;
+      font-size: 18px;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 20px 60px;
+    }
+
+    .intro {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      margin-top: -26px;
+      position: relative;
+    }
+
+    .intro h2 {
+      margin: 0 0 12px;
+      font-size: 26px;
+      color: #0f172a;
+    }
+
+    .intro p {
+      margin: 0;
+      line-height: 1.8;
+      color: #475569;
+    }
+
+    .section-title {
+      margin: 42px 0 18px;
+      font-size: 28px;
+      color: #0f172a;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: #0f172a;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      background: #dbeafe;
+      color: #1d4ed8;
+    }
+
+    .desc {
+      color: #475569;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      background: #1d4ed8;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .viewer {
+      width: 100%;
+      height: 900px;
+      border: 1px solid #dbe2ea;
+      border-radius: 14px;
+      background: #f8fafc;
+    }
+
+    .footer {
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+      padding: 12px 20px 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .intro h2,
+      .section-title {
+        font-size: 22px;
+      }
+
+      .card h3 {
+        font-size: 22px;
+      }
+
+      .viewer {
+        height: 520px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header class="hero">
+    <h1>Research & Project Posters</h1>
+    <p>
+      자율주행, 센서 융합, 차량 제어와 관련된 프로젝트 포스터를 정리한 페이지입니다.
+    </p>
+  </header>
 
-<h1 style="font-size:60px;">연구 및 프로젝트 발표 포스터 모음</h1>
+  <main class="container">
+    <section class="intro">
+      <h2>About</h2>
+      <p>
+        안녕하세요. 신유재입니다. 자율주행 프로젝트에서 ROS 기반 개발, 센서 데이터 활용,
+        차량 제어 로직 구현 경험을 쌓았으며, 해커톤과 임베디드 소프트웨어 경진대회 프로젝트를
+        통해 실제 문제를 해결하는 경험을 해왔습니다. 아래 포스터에서 주요 프로젝트를 확인하실 수 있습니다.
+      </p>
+    </section>
 
-<h2 style="font-size:40px;">2024 Mobility SW Hackathon</h2>
-<iframe src="./2024 Mobility SW Hackathon 포스터.pdf"></iframe>
+    <h2 class="section-title">Poster Archive</h2>
 
-<h2>제21회 임베디드 소프트웨어 경진대회</h2>
-<iframe src="./제21회 임베디드 소프트웨어 경진대회 포스터.pdf"></iframe>
+    <section class="card">
+      <h3>2024 Mobility SW Hackathon</h3>
+      <div class="meta">
+        <span class="badge">Autonomous Driving</span>
+        <span class="badge">Sensor Fusion</span>
+        <span class="badge">Mobility SW</span>
+      </div>
+      <p class="desc">
+        자율주행 및 모빌리티 소프트웨어 관련 프로젝트 포스터입니다.
+        차량 제어, 센서 활용, 시스템 구현 경험을 담고 있습니다.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="./2024 Mobility SW Hackathon 포스터.pdf" target="_blank">새 창에서 보기</a>
+        <a class="btn btn-secondary" href="./2024 Mobility SW Hackathon 포스터.pdf" download>PDF 다운로드</a>
+      </div>
+      <iframe class="viewer" src="./2024 Mobility SW Hackathon 포스터.pdf"></iframe>
+    </section>
 
+    <section class="card">
+      <h3>제21회 임베디드 소프트웨어 경진대회</h3>
+      <div class="meta">
+        <span class="badge">Embedded SW</span>
+        <span class="badge">Control Logic</span>
+        <span class="badge">System Implementation</span>
+      </div>
+      <p class="desc">
+        임베디드 환경에서의 시스템 구현과 소프트웨어 설계 경험을 담은 프로젝트 포스터입니다.
+      </p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="./제21회 임베디드 소프트웨어 경진대회 포스터.pdf" target="_blank">새 창에서 보기</a>
+        <a class="btn btn-secondary" href="./제21회 임베디드 소프트웨어 경진대회 포스터.pdf" download>PDF 다운로드</a>
+      </div>
+      <iframe class="viewer" src="./제21회 임베디드 소프트웨어 경진대회 포스터.pdf"></iframe>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 Yujae Shin Portfolio
+  </footer>
 </body>
 </html>
