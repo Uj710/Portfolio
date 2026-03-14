@@ -1,52 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<title>Portfolio</title>
-<style>
-<style>
-body{
-    font-family: Arial;
-    text-align: center;
-    background-color: #000;
-    color: #ffffff;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-iframe{
-    width: 80%;
-    height: 1600px;
-    margin-bottom: 40px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #ffffff;
+    }
 
-video{
-    width: 80%;
-    margin-bottom: 60px;
-}
-</style>
-</style>
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 100vh;
+      background-color: #161b22;
+      border-right: 1px solid #30363d;
+      padding: 30px 20px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      margin: 0 0 30px 0;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #c9d1d9;
+      text-decoration: none;
+      font-size: 18px;
+      margin-bottom: 18px;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      color: #58a6ff;
+    }
+
+    .content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+      padding: 40px 30px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin-top: 10px;
+      margin-bottom: 60px;
+    }
+
+    section {
+      margin-bottom: 80px;
+      padding-top: 20px;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-bottom: 24px;
+    }
+
+    iframe {
+      width: 80%;
+      height: 1200px;
+      border: none;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+    }
+
+    video {
+      width: 80%;
+      max-width: 1000px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        display: block;
+      }
+
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #30363d;
+      }
+
+      .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 30px 15px;
+      }
+
+      iframe,
+      video {
+        width: 95%;
+      }
+
+      iframe {
+        height: 900px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <nav class="sidebar">
+      <h2>목차</h2>
+      <a href="#autonomous">자율주행</a>
+      <a href="#embedded">임베디드 경진대회</a>
+      <a href="#hackathon">모빌리티 해커톤</a>
+      <a href="#creative">창의종합설계</a>
+    </nav>
 
-<h1 style="font-size:60px;">연구 및 프로젝트 발표 포스터 모음</h1>
+    <main class="content">
+      <h1>연구 및 프로젝트 포트폴리오</h1>
 
+      <section id="autonomous">
+        <h2>자율주행</h2>
+        <video controls>
+          <source src="대학생 창작 모빌리티 경진대회 연구계획서.mp4" type="video/mp4">
+          브라우저가 video 태그를 지원하지 않습니다.
+        </video>
+      </section>
 
-<h2 style="font-size:40px;">자율주행 경진대회 연구계획서</h2>
-<video controls>
-  <source src="대학생 창작 모빌리티 경진대회 연구계획서.mp4" type="video/mp4">
-</video>
+      <section id="embedded">
+        <h2>임베디드 경진대회</h2>
+        <iframe src="제21회 임베디드 소프트웨어 경진대회 포스터.pdf"></iframe>
+      </section>
 
+      <section id="hackathon">
+        <h2>모빌리티 해커톤</h2>
+        <iframe src="2024 Mobility SW Hackathon 포스터.pdf"></iframe>
+      </section>
 
-<h2 style="font-size:40px;">제21회 임베디드 소프트웨어 경진대회</h2>
-<iframe src="제21회 임베디드 소프트웨어 경진대회 포스터.pdf"></iframe>
-
-
-<h2 style="font-size:40px;">2024 Mobility SW Hackathon</h2>
-<iframe src="2024 Mobility SW Hackathon 포스터.pdf"></iframe>
-
-
-<h2 style="font-size:40px;">제17회 공과대학 창의적 종합설계 경진대회</h2>
-<iframe src="제17회 공과대학 창의적 종합설계 경진대회.pdf"></iframe>
-
-
+      <section id="creative">
+        <h2>창의종합설계</h2>
+        <iframe src="제17회 공과대학 창의적 종합설계 경진대회.pdf"></iframe>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
